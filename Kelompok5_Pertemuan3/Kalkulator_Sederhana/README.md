@@ -1,2 +1,2 @@
 # Kalkulator Sederhana
-program kalkulator sederhana.
+Program kalkulator sederhana.
