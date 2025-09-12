@@ -1,5 +1,5 @@
 var layarUtama = document.getElementById("result");
-
+let result = eval(expression);
 function tampilkan(v) {
     layarUtama.value += v;
 }
