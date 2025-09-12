@@ -2,3 +2,23 @@
     font-family: 'Gabriel Sans';
     src: url('assets/fonts/GabrielSans-Trial-Black.woff2') format('woff2');
 }
+
+body{
+    background: #9ECAD6;
+    background: linear-gradient(90deg, rgba(158, 202, 214, 1) 0%, rgba(245, 203, 203, 1) 100%);
+    }
+
+    h1{
+    justify-content: center;
+    text-align: center;
+    font-family:"Libertinus Keyboard", system-ui;
+    position: relative;
+    margin-top: 150px;
+    background: linear-gradient(to right,#114487, #b73535e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    font-style: bold;
+    font-weight: 900;
+    font-family: 'Gabriel Sans', sans-serif;
+    }
