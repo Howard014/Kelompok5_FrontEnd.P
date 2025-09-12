@@ -22,3 +22,71 @@ body{
     font-weight: 900;
     font-family: 'Gabriel Sans', sans-serif;
     }
+
+     body {
+            background: linear-gradient(90deg, rgba(158, 202, 214, 1) 0%, rgba(245, 203, 203, 1) 100%);
+            font-family: 'Gabriel Sans', sans-serif, system-ui;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+            font-size: 70px;
+            font-weight: 900;
+            background: linear-gradient(to right, #114487, #b73535e2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            user-select: none;
+        }
+
+        table {
+            border: 1px solid black;
+            margin: 50px auto;
+            border-collapse: separate;
+            border-spacing: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 15px; 
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: rgb(7, 81, 139);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        input[type="button"]:hover {
+            background-color: rgb(10, 110, 180);
+        }
+
+        /* Make the clear button distinct */
+        input[type="button"][value="c"] {
+            background-color: #b73535e2;
+        }
+
+        input[type="button"][value="c"]:hover {
+            background-color: #8a2727;
+        }
