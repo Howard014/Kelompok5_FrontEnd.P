@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Calculator Theme Switch" />
+    <title>Calculator Theme Switch</title>
+
+    <style>
+        body {
+            background: linear-gradient(90deg, rgba(158, 202, 214, 1) 0%, rgba(245, 203, 203, 1) 100%);
+            font-family: 'Gabriel Sans', sans-serif, system-ui;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+            font-size: 70px;
+            font-weight: 900;
+            background: linear-gradient(to right, #114487, #b73535e2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            user-select: none;
+        }
+
+        table {
+            border: 1px solid black;
+            margin: 50px auto;
+            border-collapse: separate;
+            border-spacing: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 15px; 
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: rgb(7, 81, 139);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        input[type="button"]:hover {
+            background-color: rgb(10, 110, 180);
+        }
+
+        /* Make the clear button distinct */
+        input[type="button"][value="c"] {
+            background-color: #b73535e2;
+        }
+
+        input[type="button"][value="c"]:hover {
+            background-color: #8a2727;
+        }
+    </style>
+
+    let result = eval(expression);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+
+</head>
+<body>
+    <h1>explore your calculator!</h1>
+
+    <table id="calcu">
+        <tr>
+            <td colspan="3">
+                <input type="text" id="result" readonly />
+            </td>
+            <td>
+                <input type="button" value="c" onclick="clr()" />
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="dis('1')" /></td>
+            <td><input type="button" value="2" onclick="dis('2')" /></td>
+            <td><input type="button" value="3" onclick="dis('3')" /></td>
+            <td><input type="button" value="/" onclick="dis('/')" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="dis('4')" /></td>
+            <td><input type="button" value="5" onclick="dis('5')" /></td>
+            <td><input type="button" value="6" onclick="dis('6')" /></td>
+            <td><input type="button" value="*" onclick="dis('*')" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="dis('7')" /></td>
+            <td><input type="button" value="8" onclick="dis('8')" /></td>
+            <td><input type="button" value="9" onclick="dis('9')" /></td>
+            <td><input type="button" value="-" onclick="dis('-')" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="dis('0')" /></td>
+            <td><input type="button" value="." onclick="dis('.')" /></td>
+            <td><input type="button" value="=" onclick="solve()" /></td>
+            <td><input type="button" value="+" onclick="dis('+')" /></td>
+        </tr>
+    </table>
+
+    <script>
+        function dis(val) {
+            document.getElementById("result").value += val;
+        }
+
+        function solve() {
+            let expression = document.getElementById("result").value;
+            try {
+                let result = math.evaluate(expression);
+                document.getElementById("result").value = result;
+            } catch (e) {
+                document.getElementById("result").value = "Error";
+            }
+        }
+
+
+        function clr() {
+            document.getElementById("result").value = "";
+
+        }
+        document.addEventListener('keydown', function(event) {
+            const allowedKeys = '0123456789+-*/.';
+            if (allowedKeys.includes(event.key)) {
+                dis(event.key);
+                event.preventDefault();
+            } else if (event.key === 'Enter') {
+                solve();
+                event.preventDefault();
+            } else if (event.key === 'Backspace') {
+                let current = document.getElementById("result").value;
+                document.getElementById("result").value = current.slice(0, -1);
+                event.preventDefault();
+            } else if (event.key.toLowerCase() === 'c') {
+                clr();
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
