@@ -1,92 +1,340 @@
 @font-face {
-    font-family: 'Gabriel Sans';
-    src: url('assets/fonts/GabrielSans-Trial-Black.woff2') format('woff2');
+    font-family: 'Flagfies';
+    src: url('assets/fonts/Flagfies.ttf') format('truetype');
 }
 
-body{
-    background: #9ECAD6;
-    background: linear-gradient(90deg, rgba(158, 202, 214, 1) 0%, rgba(245, 203, 203, 1) 100%);
+    body.container{
+    background-image: url(assets/picts,audios/jpg1.jpg);
+    background-size: cover;
+    animation: animasiBG 5s linear infinite;
+    transition: animasiBG 1s ease-in-out, background-image 1s ease-in-out;
     }
 
-    h1{
+    body.container2{
+    background: url(assets/picts,audios/83944.jpg);
+    background-size: cover;
+    animation: animasiBG 5s linear infinite;
+    transition: animasiBG 1s ease-in-out, background-image 1s ease-in-out;
+    }
+
+    body.container2 h1{
     justify-content: center;
     text-align: center;
-    font-family:"Libertinus Keyboard", system-ui;
     position: relative;
-    margin-top: 150px;
-    background: linear-gradient(to right,#114487, #b73535e2);
+    margin-top: 50px;
+    background: linear-gradient(to right,#d0c2eb, #0c0e7ae2);
+    text-shadow: 5px 5px 1px rgba(247, 247, 247,0.5);
+    background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 70px;
     font-style: bold;
     font-weight: 900;
-    font-family: 'Gabriel Sans', sans-serif;
+    font-family: 'Zen Dots', sans-serif;
+    animation: animasiBG 5s linear infinite;
     }
 
-     body {
-            background: linear-gradient(90deg, rgba(158, 202, 214, 1) 0%, rgba(245, 203, 203, 1) 100%);
-            font-family: 'Gabriel Sans', sans-serif, system-ui;
-            margin: 0;
-            padding: 0;
+    body.container h1{
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    background: linear-gradient(to right,#0c9d63, #161891e2);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    font-style: bold;
+    font-weight: 900;
+    font-family: 'Flagfies', sans-serif;
+    animation: animasiBG 5s linear infinite;
+    text-shadow: -5px -5px 0.5px rgba(235, 244, 165, 0.5);
+    }
+
+    @keyframes animasiBG{
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 70%;
         }
 
-        h1 {
-            text-align: center;
-            margin-top: 150px;
-            font-size: 70px;
-            font-weight: 900;
-            background: linear-gradient(to right, #114487, #b73535e2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            user-select: none;
+        75%{
+            background-position: 70% 50%;
         }
+        100%{
+            background-position: 50% 0%;
+        }
+        
+    }
 
-        table {
-            border: 1px solid black;
-            margin: 50px auto;
-            border-collapse: separate;
-            border-spacing: 10px;
-            background: white;
-            padding: 20px;
-            border-radius: 20px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+    .container{
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        
+    }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 20px 30px;
-            font-size: 24px;
-            font-weight: bold;
-            border: 2px solid black;
-            border-radius: 15px; 
-            box-sizing: border-box;
-            outline: none;
-        }
+    .calculator{
+        background-image: url(assets/picts,audios/jpg1.jpg);
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 5ms ease-in-out;
+    }
 
-        input[type="button"] {
-            width: 100%;
-            padding: 20px 40px;
-            background-color: rgb(7, 81, 139);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            border: none;
-            border-radius: 15px; 
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            user-select: none;
-        }
+    form .display{
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 0;
+        width: 330px;
+        
+    }
 
-        input[type="button"]:hover {
-            background-color: rgb(10, 110, 180);
-        }
+    form .display input{
+        text-align: right;
+        flex: 1;
+        font-size: 45px;
+        box-shadow: none;
+        padding-right: 10px;
+        
+    }
 
-        /* Make the clear button distinct */
-        input[type="button"][value="c"] {
-            background-color: #b73535e2;
-        }
+    .calculator form input{
+        border: 0;
+        outline: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        box-shadow: -8px 8px 10px rgba(4, 4, 4, 0.5), 5px 5px 15px rgba(68, 29, 29, 0.2);
+        background: transparent;
+        font-size: 20px;
+        color: rgb(12, 12, 12);
+        cursor: pointer;
+        margin: 10px;
+    }
 
-        input[type="button"][value="c"]:hover {
-            background-color: #8a2727;
-        }
+    form input.samadngn{
+        width: 145px;
+    }
+    
+    form input.operator{
+        color: #114487;
+    }
+
+    .container .operator{
+        font-family: 'Flagfies', sans-serif;
+    }
+
+    .container form input{
+        font-family: 'Flagfies', serif;
+        font-size: 25px;
+    }
+
+    body.container #audio1{
+        display: flex;
+        position:absolute;
+        left: 100px;
+        bottom: 400px;
+        width: 5%;
+        height: 8%;
+        border-radius: 50px;
+        border: none;
+        background-color: #027553;
+        box-shadow: -6px 5px 5px rgba(199, 241, 199, 0.608);
+    }
+
+    body.container #audio1:hover{
+        display: flex;
+        position:absolute;
+        left: 100px;
+        bottom: 400px;
+        width: 5%;
+        height: 8%;
+        border-radius: 50px;
+        border: none;
+        background-color: #09a476;
+        box-shadow: -6px 5px 5px rgba(199, 241, 199, 0.608);
+    }
+
+    body.container2 #audio1{
+        display: flex;
+        position:absolute;
+        left: 100px;
+        bottom: 400px;
+        width: 5%;
+        height: 8%;
+        border-radius: 20px;
+        border: none;
+        background-color: #4f40d0;
+        box-shadow: -6px 5px 5px rgb(31, 80, 126);
+    }
+
+    body.container2 #audio1:hover{
+        display: flex;
+        position:absolute;
+        left: 100px;
+        bottom: 400px;
+        width: 5%;
+        height: 8%;
+        border-radius: 50px;
+        border: none;
+        background-color: #5f76bc;
+        box-shadow: -6px 5px 5px rgb(142, 147, 189);
+    }
+
+    .fa-solid{
+        font-size: 25px;
+        position: absolute;
+        left: 25px;
+        padding: 15px 0px;
+        color: rgb(206, 233, 206);
+        border: none;
+    }
+
+    .fa-solid:hover{
+        font-size: 25px;
+        position: absolute;
+        left: 25px;
+        padding: 15px 0px;
+        color: rgb(131, 252, 17);
+        border: none;
+    }
+
+    .calculator2{
+        background-image: url(assets/picts,audios/83944.jpg);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+
+    .container2{
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+
+    .calculator2 form input{
+        border: 0;
+        outline: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        box-shadow: -8px 8px 10px rgb(255, 255, 255), 5px 5px 15px rgb(135, 133, 249);
+        background: transparent;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        margin: 10px;
+    }
+    .wrap{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        margin-top: -30px;
+     }
+
+     .pilih,.pilih2{
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        justify-content: center;
+        margin: 20px 120px;
+        border: none;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+     }
+
+     .pilih{
+        border-radius: 20px;
+     }
+
+     .pilih2{
+        border-radius: 5px;
+     }
+
+     .pilih2{
+        color: #ffffff;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 5px 5px 5px rgba(153, 132, 255, 0.5), -5px -5px 5px rgba(236, 236, 255, 0.5);
+        font-weight: 600;
+     }
+
+     .pilih{
+        color: #f8f7c9;
+        background-color: rgba(131, 225, 162, 0.551);
+        box-shadow: 5px 5px 5px rgba(90, 153, 45, 0.5), -5px -5px 5px rgba(37, 119, 39, 0.5);
+        font-weight: 600;
+     }
+
+     .pilih2:hover{
+        color: #ffffff;
+        background-color: rgb(61, 85, 184);
+        box-shadow: 5px 5px 5px rgba(23, 5, 113, 0.5), -5px -5px 5px rgb(165, 206, 232);
+        font-weight: 600;
+     }
+
+     .pilih:hover{
+        color: #f8f7c9;
+        background-color: rgba(168, 242, 155, 0.712);
+        box-shadow: 5px 5px 5px rgba(77, 104, 58, 0.5), -5px -5px 5px rgba(37, 119, 39, 0.5);
+        font-weight: 600;
+     }
+
+     .container2 .operator{
+        font-family: 'Zen Dots', sans-serif;
+    }
+
+    .container2 form input{
+        font-family: 'Zen Dots', sans-serif;
+        font-size: 25px;
+    }
+
+    body.container h3{
+        font-family: 'Flagfies', serif;
+        font-size: 30px;
+        align-items:baseline;
+        justify-content: baseline;
+        margin: 15em -48em 30em;
+        color: #1e8701;
+        text-shadow: 5px 5px 5px rgba(255, 245, 178, 0.881), -5px -5px 5px rgb(169, 255, 82);
+    }
+
+    body.container2 h3{
+        font-family: 'Zen Dots', sans-serif;
+        font-size: 30px;
+        align-items:baseline;
+        justify-content: baseline;
+        margin: 15em -48em 30em;
+        color: #ffffff;
+        text-shadow: 3px 3px 5px rgba(82, 79, 167, 0.881), -3px -3px 5px rgb(12, 12, 127);
+    }
+
+    body.container h4{
+        font-family: 'Flagfies', serif;
+        font-size: 25px;
+        align-items:baseline;
+        justify-content: baseline;
+        margin:-36em -57em 30em;
+        color: #1e8701;
+        text-shadow: 5px 5px 5px rgba(255, 245, 178, 0.881), -5px -5px 5px rgb(169, 255, 82);
+    }
+
+    body.container2 h4{
+        font-family: 'Zen Dots', sans-serif;
+        font-size: 25px;
+        align-items:baseline;
+        justify-content: baseline;
+        margin:-36em -57em 30em;
+        color: #ffffff;
+        text-shadow: 3px 3px 5px rgba(82, 79, 167, 0.881), -3px -3px 5px rgb(12, 12, 127);
+    }
