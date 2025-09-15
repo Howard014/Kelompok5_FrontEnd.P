@@ -9,6 +9,6 @@
 4. Choose another calculator theme and the music will change automatically
 5. You can pause the pause by clicking the music icon
    
-_**Click this link below to see the Video:**_
+_**Click this link to see the Demo Video:**_
 https://github.com/user-attachments/assets/1c05526f-ba08-4217-b402-58d9d816e3ff
 
